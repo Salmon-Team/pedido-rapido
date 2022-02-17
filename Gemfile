@@ -12,7 +12,7 @@ gem 'devise', '~> 4.8', '>= 4.8.1'
 gem 'sass-rails', '>= 6'
 gem "tailwindcss-rails", "~> 2.0"
 
-gem 'webpacker', '~> 4.0'
+gem 'webpacker'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.7'
 
