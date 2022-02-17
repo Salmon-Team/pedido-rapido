@@ -2,6 +2,18 @@
 
 Challenge to develop a rails application during Hackathon #1 - Bootcamp OBC. Our goal is to create an environment for innovation and problem solving, allowing participants to develop new skills and new techniques.
 
+### Requirements
+
+First step is to install the docker service:
+
+```bash
+#Linux:
+$ bundle install 
+$ yarn 
+$ ./bin/dev
+
+```
+
 ## ProjectInfo
 
 * Ruby version 2.7.1
