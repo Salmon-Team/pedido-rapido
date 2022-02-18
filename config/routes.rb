@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-
   devise_scope :employees do
     get "/login" => "devise/sessions#new" # custom path to login/sign_in
     get "/logout" => "devise/registrations#new", as: "new_employee_registration" # custom path to sign_up/registration
@@ -9,5 +8,6 @@ Rails.application.routes.draw do
   root to: "products#index"
 
   resources :products
-  
+
+  resources :orders
 end
