@@ -6,6 +6,6 @@ Rails.application.routes.draw do
   devise_for :employees, :path => 'users', :path_names => { :sign_in => "login", :sign_out => "logout", :sign_up => "register" }
 
   resources :products
-
   resources :orders
+  resources :categories
 end
