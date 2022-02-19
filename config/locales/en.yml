@@ -1,33 +1,59 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at https://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  texts:
+    order_product:
+      quantity: "Quantity"
+      qty: "Qty"
+      total: "Total"
+      unit_value: "Unit Value"
+  actions:
+    category:
+      back: "Back to categories"
+      edit: "Edit this category"
+      delete: "Destroy this category"
+      new: "New category"
+      show: "Show this category"
+    employee:
+      back: "Back to employees"
+      edit: "Edit this employee"
+      delete: "Destroy this employee"
+      new: "New employee"
+      show: "Show this employee"
+    order:
+      back: "Back to orders"
+      edit: "Edit this order"
+      delete: "Destroy this order"
+      new: "New order"
+      show: "Show this order"
+    order_product:
+      back: "Back to items"
+      edit: "Edit this item"
+      delete: "Destroy this item"
+      new: "New item"
+      show: "Show this item"
+    order_product_status:
+      back: "Back to status"
+      edit: "Edit this status"
+      delete: "Destroy this status"
+      new: "New status"
+      show: "Show this status"
+    payment:
+      back: "Back to payments"
+      edit: "Edit this payment"
+      delete: "Destroy this payment"
+      new: "New payment"
+      show: "Show this payment"
+    product:
+      back: "Back to products"
+      edit: "Edit this product"
+      delete: "Destroy this product"
+      new: "New product"
+      show: "Show this product"
+  forms:
+    login:
+      title: "Sign in to your account"
+      email: "E-mail"
+      password: "Password"
+      remember_me: "Remember me"
+      forgot_pass: "Forgot your password?"
+      signin: "Sign in"
+      signup: "Sign up"

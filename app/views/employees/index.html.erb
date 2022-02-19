@@ -4,8 +4,8 @@
   <% end %>
 
   <div class="flex justify-between items-center">
-    <h1 class="font-bold text-4xl">Employee</h1>
-    <%= link_to 'New Employee', new_employee_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
+    <h1 class="font-bold text-4xl"><%= @employees.model_name.human(count:@employees.count)%></h1>
+    <%= link_to t("actions.employee.new"), new_employee_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
   </div>
 
   <div id="employees" class="min-w-full">

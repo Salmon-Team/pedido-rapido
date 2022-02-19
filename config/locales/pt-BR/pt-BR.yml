@@ -1,0 +1,59 @@
+pt-BR:
+  texts:
+    order_product:
+      quantity: "Quantidade"
+      qty: "Qtd"
+      total: "Total"
+      unit_value: "Valor Unitário"
+  actions:
+    category:
+      back: "Voltar para categorias"
+      edit: "Editar essa categoria"
+      delete: "Apagar essa categoria"
+      new: "Nova categoria"
+      show: "Mostrar essa categoria"
+    employee:
+      back: "Voltar para funcionários"
+      edit: "Editar esse funcionário"
+      delete: "Apagar esse funcionário"
+      new: "Novo funcionário"
+      show: "Mostrar esse funcionário"
+    order:
+      back: "Voltar para pedidos"
+      edit: "Editar esse pedido"
+      delete: "Apagar esse pedido"
+      new: "Novo pedido"
+      show: "Mostrar esse pedido"
+    order_product:
+      back: "Voltar para itens"
+      edit: "Editar esse item"
+      delete: "Apagar esse item"
+      new: "Novo item"
+      show: "Mostrar esse item"
+    order_product_status:
+      back: "Voltar para status dos itens"
+      edit: "Editar o status do item"
+      delete: "Apagar o status do item"
+      new: "Novo status do item"
+      show: "Mostrar o status do item"
+    payment:
+      back: "Voltar para pagamentos"
+      edit: "Editar esse pagamento"
+      delete: "Apagar esse pagamento"
+      new: "Novo pagamento"
+      show: "Mostrar esse pagamento"
+    product:
+      back: "Voltar para produtos"
+      edit: "Editar esse produto"
+      delete: "Apagar esse produto"
+      new: "Novo produto"
+      show: "Mostrar esse produto"
+  forms:
+    login:
+      title: "Entre na sua conta"
+      email: "E-mail"
+      password: "Senha"
+      remember_me: "Lembrar"
+      forgot_pass: "Esqueceu sua senha?"
+      signin: "Entrar"
+      signup: "Cadastrar-se"
