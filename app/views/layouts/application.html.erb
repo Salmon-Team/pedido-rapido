@@ -11,6 +11,8 @@
   </head>
 
   <body>
+    <p><%= link_to "BR", url_for(only_path: false)+"?locale=pt-BR" %></p>
+    <p><%= link_to "EN", url_for(only_path: false)+"?locale=en" %></p>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     
