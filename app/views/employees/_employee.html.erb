@@ -1,0 +1,29 @@
+<div id="<%= dom_id employee %>">
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Name:</strong>
+    <%= employee.name %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">E-mail:</strong>
+    <%= employee.email %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Kind:</strong>
+    <%= employee.kind %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Status:</strong>
+    <%= employee.status %>
+  </p>
+
+
+  <% if action_name != "show" %>
+    <%= link_to "Show this employee", employee, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to 'Edit this employee', edit_employee_path(employee), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to 'Destroy this employee',employee_registration_path(employee), method: :delete, class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <hr class="mt-6">
+  <% end %>
+</div>
