@@ -1,0 +1,30 @@
+<div id="<%= dom_id order %>">
+  <p class="my-5">
+    <strong class="block font-medium mb-1"><%= Employee.model_name.human %>:</strong>
+    <%= order.employee.name %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1"><%= Order.human_attribute_name(:client_name) %>:</strong>
+    <%= order.client_name %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1"><%= Order.human_attribute_name(:table_number) %>:</strong>
+    <%= order.table_number %>
+  </p>
+
+  <div class="my-5">
+    <strong class="block font-medium mb-1"><%= OrderProduct.model_name.human(count:2) %>:</strong>
+    <% order.order_products.each do |item| %>
+      <p class='my-3'><span><%= item.status_name %></span> <%= item.product_name %> - <%= t("texts.order_product.qty")%>: <%= item.quantity %> - <%= t("texts.order_product.unit_value")%>: <%= number_to_currency item.product_price %> - <%= t("texts.order_product.total")%>: <%= number_to_currency (item.quantity*item.product_price) %></p>
+    <% end %>
+  </div>
+
+  <% if action_name != "show" %>
+    <%= link_to t('actions.order.show'), order, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to t('actions.order.edit'), edit_order_path(order), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to t('actions.order.delete'),order_path(order), method: :delete, class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <hr class="mt-6">
+  <% end %>
+</div>

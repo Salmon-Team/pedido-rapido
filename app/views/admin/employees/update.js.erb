@@ -1,0 +1,3 @@
+<% if @employee.errors.any? %>
+  alert("ERROS: <%= j @employee.errors.full_messages.join('; ').html_safe %>")
+<% end %>
