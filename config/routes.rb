@@ -1,11 +1,7 @@
 Rails.application.routes.draw do
-  root to: "admin/static_pages#home"
-
-
-
+  root to: "admin/pages#home"
 
   devise_for :employees, :path => 'users', :path_names => { :sign_in => "login", :sign_out => "logout", :sign_up => "register" }
-
 
   scope module: 'admin' do
     constraints subdomain: 'admin' do
