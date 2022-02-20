@@ -1,8 +1,26 @@
-<h3>Seja bem vindo! </h3>
-<p>Escolha uma das opções de login:</p>
+<div class="flex flex-col justify-center items-center m-auto">
 
-<ol>
-	<li><%= link_to "Área Administrativa", orders_url(subdomain: "admin") %></li>
-	<li><%= link_to "Comanda Virtual", orders_url(subdomain: "comandavirtual") %></li>
-	<li><%= link_to "Pedidos da Cozinha", orders_url(subdomain: "pedidos") %></li>
-</ol>
+	<h3 class="font-bold my-4 text-xl md:text-4xl">Seja bem vindo! </h3>
+
+	<p class="font-semibold my-2 text-base md:text-xl">Escolha uma das opções de login:</p>
+
+	<ol class="w-11/12 max-w-3xl mt-8 mx-auto p-4 rounded-lg
+	flex flex-col justify-center items-center bg-blue-300">
+
+		<li class="p-2 my-2 uppercase border border-slate-100 rounded-lg
+		bg-indigo-800 text-white font-bold
+		hover:opacity-80 hover:underline">
+			<%= link_to "Área Administrativa", orders_url(subdomain: "admin") %>
+		</li>
+<li class="p-2 my-2 uppercase border border-slate-100 rounded-lg
+		bg-indigo-800 text-white font-bold
+		hover:opacity-80 hover:underline">
+			<%= link_to "Comanda Virtual", orders_url(subdomain: "comandavirtual") %>
+		</li>
+<li class="p-2 my-2 uppercase border border-slate-100 rounded-lg
+		bg-indigo-800 text-white font-bold
+		hover:opacity-80 hover:underline">
+			<%= link_to "Pedidos da Cozinha", orders_url(subdomain: "pedidos") %>
+		</li>
+	</ol>
+</div>
