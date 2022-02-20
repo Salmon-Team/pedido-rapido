@@ -1,5 +1,5 @@
-class EmployeesController < ApplicationController
-  before_action :set_employee, only: %i[ show edit update]
+class Admin::EmployeesController < ApplicationController
+  before_action :set_employee, only: %i[ show edit update toggle]
 
   def index
     @employees = Employee.all
@@ -36,6 +36,11 @@ class EmployeesController < ApplicationController
         format.html { render :edit, status: :unprocessable_entity }
       end
     end
+  end
+
+  def toggle
+    @employee.active? ? @employee.inactive! : @employee.active!
+    redirect_to employee_url(@employee, subdomain: request.subdomain)
   end
 
 private

@@ -23,8 +23,7 @@
     <strong class="block font-medium mb-1"><%= Product.human_attribute_name(:preparation_time) %></strong>
     <%= product.preparation_time %>
   </p>
-
-  <% if action_name != "show" %>
+  <% if (action_name != "show") && (action_name != "destroy") %>
     <%= link_to t("actions.product.show"), product, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
     <%= link_to t("actions.product.edit"), edit_product_path(product), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
     <hr class="mt-6">
