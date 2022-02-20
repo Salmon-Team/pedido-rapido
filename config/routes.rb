@@ -13,6 +13,7 @@ Rails.application.routes.draw do
       end
       resources :categories
       resources :orders
+      get '/dashboard', to: 'pages#dashboard'
     end
   end
 
