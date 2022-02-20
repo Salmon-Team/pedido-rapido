@@ -1,11 +1,35 @@
 Rails.application.routes.draw do
-  root to: "products#index"
+  root to: "admin/static_pages#home"
 
-  resources :employees, only: [:index, :show, :new, :create, :edit, :update]
+
+
 
   devise_for :employees, :path => 'users', :path_names => { :sign_in => "login", :sign_out => "logout", :sign_up => "register" }
 
-  resources :products
-  resources :orders
-  resources :categories
+
+  scope module: 'admin' do
+    constraints subdomain: 'admin' do
+      resources :employees, only: [:index, :show, :new, :create, :edit, :update]  do
+        get :toggle, on: :member, action: :toggle, as: :toggle
+      end
+      resources :products do
+        get :toggle, on: :member, action: :toggle, as: :toggle
+      end
+      resources :categories
+      resources :orders
+    end
+  end
+
+  scope module: 'attendant' do
+    constraints subdomain: 'comandavirtual' do
+      resources :orders
+    end
+  end
+
+  scope module: 'cook' do
+    constraints subdomain: 'pedidos' do
+      resources :orders
+    end
+  end
+
 end

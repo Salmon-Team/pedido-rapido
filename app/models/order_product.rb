@@ -1,6 +1,6 @@
 class OrderProduct < ApplicationRecord
   belongs_to :order
-  belongs_to :product
+  belongs_to :product, counter_cache: true
   has_many :order_product_statuses, dependent: :destroy
   has_one :category, through: :product
   has_one :employee, :through => :order

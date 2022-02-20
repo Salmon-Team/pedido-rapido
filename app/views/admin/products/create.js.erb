@@ -1,0 +1,3 @@
+<% if @product.errors.any? %>
+  alert("ERROS: <%= j @product.errors.full_messages.join('; ').html_safe %>")
+<% end %>
