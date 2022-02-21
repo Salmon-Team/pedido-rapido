@@ -1,16 +1,28 @@
-<nav class="bg-white">
-  <div class="flex flex-row justify-evenly">
-    
+<nav class="bg-slate-800 flex items-center justify-around">
+  <ul class="flex items-center justify-around">
+    <button class="mx-1 my-2 p-4 hover:bg-indigo-600 hover:text-white font-semibold rounded-lg">
       <%= link_to "Dashboard", dashboard_path %>
+    </button>
+    <li class="mx-1 my-2 p-4 hover:bg-indigo-600 hover:text-white font-semibold rounded-lg">
       <%= link_to Employee.model_name.human, employees_path %>
+    </li>
+    <li class="mx-1 my-2 p-4 hover:bg-indigo-600 hover:text-white font-semibold rounded-lg">
       <%= link_to Category.model_name.human, categories_path %>
+    </li>
+    <li class="mx-1 my-2 p-4 hover:bg-indigo-600 hover:text-white font-semibold rounded-lg">
       <%= link_to Product.model_name.human, products_path %>
+    </li>
+    <li class="mx-1 my-2 p-4 hover:bg-indigo-600 hover:text-white font-semibold rounded-lg">
       <%= link_to Order.model_name.human, orders_path %>
-  </div>
-  <div class="flex flex-row justify-start">
-  <%= link_to "BR", url_for(only_path: false)+"?locale=pt-BR" %> / <%= link_to "EN", url_for(only_path: false)+"?locale=en" %>
-  </div>
-  
-</nav>
+    </li>
 
-  
+    <div class="flex flex-row justify-start items-center">
+      <li class="mx-1 my-2 p-4 hover:bg-indigo-600 hover:text-white font-semibold rounded-lg">
+        <%= link_to "BR", url_for(only_path: false)+"?locale=pt-BR" %>
+      </li> -
+      <li class="mx-1 my-2 p-4 hover:bg-indigo-600 hover:text-white font-semibold rounded-lg">
+        <%= link_to "EN", url_for(only_path: false)+"?locale=en" %>
+      </li>
+    </div>
+  </ul>
+</nav>

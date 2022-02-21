@@ -1,14 +1,14 @@
-<div class="w-full">
+<div class="w-11/12 max-w-5xl mx-auto flex flex-col justify-center items-center">
   <% if notice.present? %>
     <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
   <% end %>
 
-  <div class="flex justify-between items-center">
-    <h1 class="font-bold text-4xl"><%= @categories.model_name.human(count: @categories.count)%></h1>
+  <div class="w-full flex justify-between items-center p-2">
+    <h1 class="font-bold text-4xl uppercase"><%= @categories.model_name.human(count: @categories.count)%></h1>
     <%= link_to t("actions.category.new"), new_category_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
   </div>
 
-  <div id="categories" class="min-w-full">
+  <div id="categories" class="w-11/12 max-w-5xl mx-auto px-2">
     <%= render @categories %>
   </div>
 </div>
