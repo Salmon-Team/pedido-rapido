@@ -10,7 +10,6 @@ gem 'puma', '~> 4.1'
 gem 'devise', '~> 4.8', '>= 4.8.1'
 
 gem 'sass-rails', '>= 6'
-gem "tailwindcss-rails", "~> 2.0"
 
 gem 'webpacker', '~> 5.4', '>= 5.4.3'
 gem 'turbolinks', '~> 5'
@@ -35,5 +34,4 @@ group :development do
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-
 

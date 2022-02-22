@@ -1,14 +1,14 @@
-<div class="w-full">
+<div>
   <% if notice.present? %>
-    <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
+    <p id="notice"><%= notice %></p>
   <% end %>
 
-  <div class="flex justify-between items-center">
-    <h1 class="font-bold text-4xl"><%= @orders.model_name.human(count: @orders.count) %></h1>
-    <%= link_to t("actions.order.new"), new_order_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
+  <div>
+    <h1><%= @orders.model_name.human(count: @orders.count) %></h1>
+    <%= link_to t("actions.order.new"), new_order_path %>
   </div>
 
-  <div id="orders" class="min-w-full">
+  <div>
     <%= render @orders %>
   </div>
 </div>

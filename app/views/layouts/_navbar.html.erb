@@ -1,28 +1,33 @@
-<nav class="bg-slate-800 flex items-center justify-around">
-  <ul class="flex items-center justify-around">
-    <button class="mx-1 my-2 p-4 hover:bg-indigo-600 hover:text-white font-semibold rounded-lg">
-      <%= link_to "Dashboard", dashboard_path %>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><%= image_tag("fastmenu.png", size:"72") %></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
     </button>
-    <li class="mx-1 my-2 p-4 hover:bg-indigo-600 hover:text-white font-semibold rounded-lg">
-      <%= link_to Employee.model_name.human, employees_path %>
-    </li>
-    <li class="mx-1 my-2 p-4 hover:bg-indigo-600 hover:text-white font-semibold rounded-lg">
-      <%= link_to Category.model_name.human, categories_path %>
-    </li>
-    <li class="mx-1 my-2 p-4 hover:bg-indigo-600 hover:text-white font-semibold rounded-lg">
-      <%= link_to Product.model_name.human, products_path %>
-    </li>
-    <li class="mx-1 my-2 p-4 hover:bg-indigo-600 hover:text-white font-semibold rounded-lg">
-      <%= link_to Order.model_name.human, orders_path %>
-    </li>
-
-    <div class="flex flex-row justify-start items-center">
-      <li class="mx-1 my-2 p-4 hover:bg-indigo-600 hover:text-white font-semibold rounded-lg">
-        <%= link_to "BR", url_for(only_path: false)+"?locale=pt-BR" %>
-      </li> -
-      <li class="mx-1 my-2 p-4 hover:bg-indigo-600 hover:text-white font-semibold rounded-lg">
-        <%= link_to "EN", url_for(only_path: false)+"?locale=en" %>
-      </li>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <%= link_to "Dashboard", dashboard_path, class:"nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to Employee.model_name.human, employees_path, class:"nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to Product.model_name.human, products_path, class:"nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to Order.model_name.human, orders_path, class:"nav-link" %>
+        </li>
+      </ul>
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <%= link_to "BR", url_for(only_path: false)+"?locale=pt-BR", class:"nav-link"  %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "EN", url_for(only_path: false)+"?locale=en", class:"nav-link"  %>
+        </li>
+        </ul>
+      
     </div>
-  </ul>
+  </div>
 </nav>
