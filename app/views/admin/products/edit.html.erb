@@ -1,8 +1,8 @@
-<div class="mx-auto md:w-2/3 w-full">
-  <h1 class="font-bold text-4xl"><%= t("actions.product.edit")%></h1>
+<div>
+  <h1><%= t("actions.product.edit")%></h1>
 
   <%= render "form", product: @product %>
 
-  <%= link_to t("actions.product.show"), @product, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
-  <%= link_to t("actions.product.back"), products_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+  <%= link_to t("actions.product.show"), @product %>
+  <%= link_to t("actions.product.back"), products_path %>
 </div>

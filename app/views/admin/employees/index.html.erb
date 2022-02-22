@@ -1,14 +1,14 @@
-<div class="w-11/12 max-w-5xl mx-auto flex flex-col justify-center items-center">
+<div>
   <% if notice.present? %>
-    <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
+    <p id="notice"><%= notice %></p>
   <% end %>
 
-  <div class="w-full flex justify-between items-center p-2">
-    <h1 class="font-bold text-4xl uppercase"><%= @employees.model_name.human(count:@employees.count)%></h1>
-    <%= link_to t("actions.employee.new"), new_employee_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
+  <div>
+    <h1><%= @employees.model_name.human(count:@employees.count)%></h1>
+    <%= link_to t("actions.employee.new"), new_employee_path %>
   </div>
 
-  <div id="employees" class="w-11/12 max-w-5xl mx-auto px-2">
+  <div id="employees">
     <%= render @employees %>
   </div>
 </div>

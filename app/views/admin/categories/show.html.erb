@@ -1,15 +1,15 @@
-<div class="mx-auto md:w-2/3 w-full flex">
-  <div class="mx-auto">
+<div>
+  <div>
     <% if notice.present? %>
-      <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
+      <p id="notice"><%= notice %></p>
     <% end %>
 
     <%= render @category %>
 
-    <%= link_to t("actions.category.edit"), edit_category_path(@category), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to t("actions.category.edit"), edit_category_path(@category) %>
     <div class="inline-block ml-2">
-      <%= button_to t("actions.category.delete"), category_path(@category), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium" %>
+      <%= button_to t("actions.category.delete"), category_path(@category), method: :delete %>
     </div>
-    <%= link_to t("actions.category.back"), categories_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to t("actions.category.back"), categories_path %>
   </div>
 </div>

@@ -1,21 +1,21 @@
 <div id="<%= dom_id employee %>">
-  <p class="my-5">
-    <strong class="block font-medium mb-1"><%= Employee.human_attribute_name(:name) %>:</strong>
+  <p>
+    <strong><%= Employee.human_attribute_name(:name) %>:</strong>
     <%= employee.name %>
   </p>
 
-  <p class="my-5">
-    <strong class="block font-medium mb-1"><%= Employee.human_attribute_name(:email) %>:</strong>
+  <p>
+    <strong><%= Employee.human_attribute_name(:email) %>:</strong>
     <%= employee.email %>
   </p>
 
-  <p class="my-5">
-    <strong class="block font-medium mb-1"><%= Employee.human_attribute_name(:kind) %>:</strong>
+  <p>
+    <strong><%= Employee.human_attribute_name(:kind) %>:</strong>
     <%= employee.kind %>
   </p>
 
-  <p class="my-5">
-    <strong class="block font-medium mb-1"><%= Employee.human_attribute_name(:status) %>:</strong>
+  <p>
+    <strong><%= Employee.human_attribute_name(:status) %>:</strong>
     <%= employee.status %>
   </p>
 

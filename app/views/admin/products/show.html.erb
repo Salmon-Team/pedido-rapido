@@ -1,7 +1,7 @@
-<div class="mx-auto md:w-2/3 w-full flex">
-  <div class="mx-auto">
+<div>
+  <div>
   <% if @product.errors.any? %>
-    <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
+    <div id="error_explanation">
       <ul>
         <% @product.errors.full_messages.each do |error| %>
           <li><%= error %></li>
@@ -10,18 +10,18 @@
     </div>
   <% end %>
     <% if notice.present? %>
-      <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
+      <p id="notice"><%= notice %></p>
     <% end %>
     <%= render @product %>
 
-    <%= link_to t("actions.product.edit"), edit_product_path(@product), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
-    <div class="inline-block ml-2 <%= dom_id(@product)%>">
+    <%= link_to t("actions.product.edit"), edit_product_path(@product) %>
+    <div <%= dom_id(@product)%>">
       <% if @product.order_products_count > 0 %>
-        <%= link_to @product.status, toggle_product_path(@product), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium"  %>
+        <%= link_to @product.status, toggle_product_path(@product) %>
       <% else %>
-        <%= button_to t("actions.product.delete"), product_path(@product), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium"  %>
+        <%= button_to t("actions.product.delete"), product_path(@product), method: :delete %>
       <% end %>
     </div>
-    <%= link_to t("actions.product.back"), products_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to t("actions.product.back"), products_path %>
   </div>
 </div>
