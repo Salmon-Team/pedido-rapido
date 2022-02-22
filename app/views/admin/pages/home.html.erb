@@ -1,15 +1,15 @@
-<div>
-	<h3>Seja bem vindo! </h3>
-	<p>Escolha uma das opções de login:</p>
-	<ol>
-		<li>
-			<%= link_to "Área Administrativa", orders_url(subdomain: "admin") %>
-		</li>
-		<li>
-			<%= link_to "Comanda Virtual", orders_url(subdomain: "comandavirtual") %>
-		</li>
-		<li>
-			<%= link_to "Pedidos da Cozinha", orders_url(subdomain: "pedidos") %>
-		</li>
-	</ol>
+<div class="card text-center">
+  <div class="card-header">
+    Seja Bem Vindo!
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Login</h5>
+    <p class="card-text">Escolha uma das opções abaixo:</p>
+		<%= link_to "Área Administrativa", orders_url(subdomain: "admin"), class:"btn btn-primary" %>
+    <%= link_to "Comanda Virtual", orders_url(subdomain: "comandavirtual"), class:"btn btn-primary ms-3 me-3" %>
+    <%= link_to "Pedidos da Cozinha", orders_url(subdomain: "pedidos"), class:"btn btn-primary" %>
+  </div>
+  <div class="card-footer text-muted">
+    FastMenu - Sua opção mais rápida!
+  </div>
 </div>

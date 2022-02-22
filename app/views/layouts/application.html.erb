@@ -12,9 +12,11 @@
 
 
   <body>
-    <%= render 'layouts/navbar' if employee_signed_in?%>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <%= yield %>
+    <div class="container">
+      <%= render 'layouts/navbar' if employee_signed_in?%>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+      <%= yield %>
+    </div>
   </body>
 </html>
