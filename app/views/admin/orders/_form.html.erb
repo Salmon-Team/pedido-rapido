@@ -1,36 +1,50 @@
-<%= form_with(model: order, class: "contents") do |form| %>
-  <% if order.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(order.errors.count, "error") %> prohibited this order from being saved:</h2>
-      <ul>
-        <% order.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
+  <div class="d-flex justify-content-center align-items-center card mt-2 mb-4 py-2">
+
+    <%= form_with(model: order, class: "contents") do |form| %>
+      <% if order.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(order.errors.count, "error") %> prohibited this order from being saved:</h2>
+          <ul>
+            <% order.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <%# IDENTIFICAÇÃO PEDIDO %>
+      <div class="d-flex flex-column flex-md-row my-2 text-center
+        justify-content-center align-items-center">
+        <div class="mx-2">
+          <strong><%= form.label :client_name %>:</strong>
+          <%= form.text_field :client_name %>
+        </div>
+
+        <div class="mx-2">
+          <strong><%= form.label :table_number %>:</strong>
+          <%= form.number_field :table_number %>
+        </div>
+      </div>
+
+      <div class="d-flex flex-column flex-md-row flex-wrap justify-content-center align-items-center my-2">
+        <%= form.fields_for :order_products do |f|%>
+          <div class="custom-card border mx-2 p-2">
+            <div class="d-flex flex-column justify-content-center align-items-center text-center">
+              <%= f.hidden_field :product_id, value: f.object.product.id %>
+              <p class="my-0"><b>Item:</b> <%= f.object.product.name %> </p>
+              <p class="my-0"><b><%= t("texts.order_product.unit_value")%>: </b><%= number_to_currency f.object.product.price %> </p>
+              <div class="d-flex flex-column">
+                <p class="my-0"><%= f.label :quantity, class:"custom-input" %></p>
+                <p class="my-0"><%= f.number_field :quantity, class:"custom-input" %></p>
+              </div>
+            </div>
+          </div>
         <% end %>
-      </ul>
-    </div>
-  <% end %>
+      </div>
 
-  <div>
-    <%= form.label :client_name %>
-    <%= form.text_field :client_name %>
-  </div>
+      <div class="d-flex justify-content-center align-items-center">
+        <%= form.submit class:"btn btn-danger text-white text-decoration-none" %>
+      </div>
+    <% end %>
 
-  <div>
-    <%= form.label :table_number %>
-    <%= form.number_field :table_number %>
   </div>
-
-  <%= form.fields_for :order_products do |f|%>
-    <div>
-      <%= f.hidden_field :product_id, value: f.object.product.id %>
-      <p><b>Item:</b> <%= f.object.product.name %> </p>
-      <p><b><%= t("texts.order_product.unit_value")%>:</b><%= number_to_currency f.object.product.price %> </p>
-      <%= f.label :quantity %>
-      <%= f.number_field :quantity %>
-    </div>
-  <% end %>
-    
-  <div>
-    <%= form.submit %>
-  </div>
-<% end %>

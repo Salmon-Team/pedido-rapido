@@ -13,3 +13,26 @@
  *= require_tree .
  *= require_self
  */
+
+.bg-red {
+  background-color: #de0d0d;
+}
+
+.custom-card {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .custom-card {
+    width: 33%;
+  }
+}
+
+.custom-container {
+  width: min(100%, 600px);
+  margin: 0 auto;
+}
+
+.custom-input {
+  width: 50%;
+}
