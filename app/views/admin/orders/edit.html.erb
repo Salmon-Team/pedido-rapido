@@ -1,8 +1,18 @@
-<div>
-  <h1><%= t("actions.order.edit") %></h1>
+<div class="d-flex justify-content-center align-items-center mb-4">
+  <h1 class="text-decoration-none">
+    <%= t("actions.order.edit") %>
+  </h1>
+</div>
 
-  <%= render "form", order: @order %>
 
-  <%= link_to t("actions.order.show"), @order %>
-  <%= link_to t("actions.order.back"), orders_path %>
+<%= render "form", order: @order %>
+
+<div class="d-flex flex-column flex-md-row
+justify-content-around align-items-center">
+  <button class="btn btn-danger mt-2">
+    <%= link_to t("actions.order.show"), @order, class:"text-decoration-none text-white" %>
+  </button>
+  <button class="btn btn-danger mt-2">
+    <%= link_to t("actions.order.back"), orders_path, class:"text-decoration-none text-white" %>
+  </button>
 </div>
